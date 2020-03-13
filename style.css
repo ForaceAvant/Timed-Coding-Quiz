@@ -24,21 +24,6 @@
     font-size: 40px;
 }
 
-#answer-1{
-    display: none;
-}
-
-#answer-2{
-    display: none;
-}
-
-#answer-3{
-    display: none;
-}
-
-#answer-4{
-    display: none;
-}
 
 #begin-button{
     background-color: #4CAF50; /* Green */
@@ -50,6 +35,7 @@
     font-size: 30px;
     margin-top: 30px;
     margin-left: 270px;
+    display: inline-block;
 }
 
 

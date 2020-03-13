@@ -17,12 +17,14 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
-            <button class="btn btn-outline-success" type="button">View High Scores</button>
+            <button class="btn btn-outline-success" id="high-score-button" type="button">View High Scores</button>
         </form>
     </nav>
 
@@ -36,21 +38,23 @@
                     <h1 class="display-8" id="question-number">Timed Coding Quiz</h1>
                     <p class="lead" id="question">Press Start to Begin</p>
                     <hr class="my-4">
-                    
-                    <button class="button" id="answer-1"></button>
-                    <button class="button" id="answer-2"></button>
-                    <button class="button" id="answer-3"></button>
-                    <button class="button" id="answer-4"></button>
-                    <button id="begin-button">Begin</button>
 
-                  </div>
+                    <button class="button" id="answer-1" style="display: none"></button>
+                    <button class="button" id="answer-2" style="display: none"></button>
+                    <button class="button" id="answer-3" style="display: none"></button>
+                    <button class="button" id="answer-4" style="display: none"></button>
+                    <button id="begin-button" style="display: inline-block">Begin</button>
+
+                </div>
             </div>
             <div class="col-2">
-                
+
             </div>
         </div>
 
     </div>
+    <!-- linking javascript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
