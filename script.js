@@ -72,7 +72,7 @@ function answerCheck(event) {
             console.log("Correct answer")
         }
         else {
-            questionAnswerTextFill(questionList[i]);
+            endOfQuizScreenMaker();
         }
     }
     else if (event.getAttribute("id") == "answer-2" && correctAnswerArray[i] == 1) {
@@ -81,7 +81,7 @@ function answerCheck(event) {
             console.log("Correct answer")
         }
         else {
-            questionAnswerTextFill(questionList[i]);
+            endOfQuizScreenMaker();
         }
     }
     else if (event.getAttribute("id") == "answer-3" && correctAnswerArray[i] == 2) {
@@ -91,7 +91,7 @@ function answerCheck(event) {
         }
         else {
             
-            questionAnswerTextFill(questionList[i]);
+            endOfQuizScreenMaker();
         }
     }
     else if (event.getAttribute("id") == "answer-4" && correctAnswerArray[i] == 3) {
@@ -100,7 +100,7 @@ function answerCheck(event) {
             console.log("Correct answer")
         }
         else {
-            questionAnswerTextFill(questionList[i]);
+            endOfQuizScreenMaker();
         }
     }
     else {
@@ -110,11 +110,21 @@ function answerCheck(event) {
         }
         else {
             console.log("Wrong Answer")
-            questionAnswerTextFill(questionList[i]);
+            endOfQuizScreenMaker();
         }
     }
     i++;
 };
+
+function endOfQuizScreenMaker(){
+    answerButton1.style.display = "none";
+    answerButton2.style.display = "none";
+    answerButton3.style.display = "none";
+    answerButton4.style.display = "none";
+
+    jumbotronElement.querySelector("#question-number").textContent = "Quiz Finished";
+    jumbotronElement.querySelector("#question").textContent = "Your Score was: ";
+}
 
 //Beginning Event Listener that starts on the click of Begin Button
 beginButton.addEventListener("click", function () {
