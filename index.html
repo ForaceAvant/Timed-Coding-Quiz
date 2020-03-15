@@ -25,7 +25,7 @@
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
             <button class="btn btn-outline-success" id="high-score-button" type="button">View High Scores</button>
-            
+
         </form>
         <div style="display:none" id="timer"></div>
     </nav>
@@ -46,6 +46,22 @@
                     <button class="button" id="answer-3" style="display: none"></button>
                     <button class="button" id="answer-4" style="display: none"></button>
                     <button id="begin-button" style="display: inline-block">Begin</button>
+
+                    <form class="form-inline" id="initials-input" style="display: none">
+                        <div class="form-group">
+                            <label for="inputPassword6">Initials:</label>
+                            <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                                aria-describedby="passwordHelpInline">
+                            <small id="passwordHelpInline" class="text-muted">
+                                Please insert initials
+                            </small>
+
+                        </div>
+                    </form>
+                    <div id="initials" style="display:none">
+                        <button id="initials-button">Enter</button>
+                    </div>
+
 
                 </div>
             </div>

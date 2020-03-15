@@ -13,6 +13,7 @@ var correctAnswerArray = [1, 2, 0, 1, 2, 0, 3, 2];
 var i = 0;
 var timer = 75;
 var playerPoints = 0;
+var interval;
 //Object containing all the questions and answers
 
 var question1 = {
@@ -74,10 +75,12 @@ function answerCheck(event) {
             questionAnswerTextFill(questionList[i + 1]);
             console.log("Correct answer")
             playerPoints += timer;
+            countdownTimer();
         }
         else {
             playerPoints += timer;
             endOfQuizScreenMaker();
+            
         }
     }
     else if (event.getAttribute("id") == "answer-2" && correctAnswerArray[i] == 1) {
@@ -85,6 +88,7 @@ function answerCheck(event) {
             playerPoints += timer;
             questionAnswerTextFill(questionList[i + 1]);
             console.log("Correct answer")
+            
         }
         else {
             playerPoints += timer;
@@ -96,6 +100,7 @@ function answerCheck(event) {
             playerPoints += timer;
             questionAnswerTextFill(questionList[i + 1]);
             console.log("Correct answer")
+            
         }
         else {
             playerPoints += timer;
@@ -107,6 +112,7 @@ function answerCheck(event) {
             playerPoints += timer;
             questionAnswerTextFill(questionList[i + 1]);
             console.log("Correct answer")
+        
         }
         else {
             playerPoints += timer;
@@ -118,6 +124,7 @@ function answerCheck(event) {
             questionAnswerTextFill(questionList[i + 1]);
             console.log("Wrong answer")
             timer = timer - 10;
+            
         }
         else {
             console.log("Wrong Answer")
@@ -128,7 +135,16 @@ function answerCheck(event) {
     i++;
 };
 
+function checkTime(){
+    if(timer <= 0){
+        endOfQuizScreenMaker();
+    }
+}
+
 function endOfQuizScreenMaker(){
+    timer= 0;
+    renderTime();
+    clearInterval(interval);
     answerButton1.style.display = "none";
     answerButton2.style.display = "none";
     answerButton3.style.display = "none";
@@ -136,16 +152,21 @@ function endOfQuizScreenMaker(){
 
     jumbotronElement.querySelector("#question-number").textContent = "Quiz Finished";
     jumbotronElement.querySelector("#question").textContent = "Your Score was: " + playerPoints;
+    jumbotronElement.querySelector("#initials-input").style.display = "inline-block";
+    jumbotronElement.querySelector("#initials").style.display = "inline-flex";
 }
 
 function countdownTimer(){
     if(timer > 0){
         interval = setInterval(function(){
+            checkTime();
             renderTime();
             timer--;
         }, 1000);
     }
     else{
+        timer = 0;
+        renderTime();
         endOfQuizScreenMaker();
     }
 }
@@ -184,6 +205,7 @@ for (var j = 0; j < buttonClass.length; j++) {
         answerCheck(this);
     })
 }
+
 
 
 
