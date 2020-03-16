@@ -37,7 +37,7 @@
             </div>
             <div class="col-8">
                 <div class="jumbotron">
-                    <h1 class="display-8" id="question-number">Timed Coding Quiz</h1>
+                    <h1 class="display-8" id="question-number" style="text-align: center">Timed Coding Quiz</h1>
                     <p class="lead" id="question">Press Start to Begin</p>
                     <hr class="my-4">
 
@@ -50,7 +50,7 @@
                     <form class="form-inline" id="initials-input" style="display: none">
                         <div class="form-group">
                             <label for="inputPassword6">Initials:</label>
-                            <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                            <input id="inputPassword6" class="form-control mx-sm-3"
                                 aria-describedby="passwordHelpInline">
                             <small id="passwordHelpInline" class="text-muted">
                                 Please insert initials
@@ -58,11 +58,46 @@
 
                         </div>
                     </form>
+                    <div>
+                        <ol id="highscoreList" display="display: none">
+                            <div>
+                                <li id="highscore1" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore2" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore3" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore4" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore5" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore6" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore7" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore8" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore9" class="highscore-list" style="display: none"></li>
+                            </div>
+                            <div>
+                                <li id="highscore10" class="highscore-list" style="display: none"></li>
+                            </div>
+                        </ol>
+                    </div>
                     <div id="initials" style="display:none">
                         <button id="initials-button">Enter</button>
                     </div>
-
-
+                    <div id="play-div" style="display:none">
+                        <button id="play-button">Play</button>
+                    </div>
                 </div>
             </div>
             <div class="col-2">
